@@ -1,5 +1,5 @@
 import {expect, test} from "vitest"
-import {removeDuplicatesFromArray, removeDuplicatesFromArray2} from "../09-remove-duplicate-in-array"
+import {removeDuplicatesFromArray, removeDuplicatesFromArray2} from "../10-remove-duplicate-in-array"
 
 let testCases = [
   {input: [1, 2, 3, 4, 4, 5, 5], expected: [1, 2, 3, 4, 5]},

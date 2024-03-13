@@ -1,8 +1,7 @@
 import {expect, test} from "vitest"
 import {isNumber} from "../02-is-number"
 
-test("Test isNumber function", () => {
-  // Test numbers
+test("isNumber function is accurately verifying numerical values", () => {
   expect(isNumber(1)).toBe(true)
   expect(isNumber(3.14)).toBe(true)
 

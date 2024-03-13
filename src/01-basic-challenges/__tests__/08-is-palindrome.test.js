@@ -1,5 +1,5 @@
 import {expect, test} from "vitest"
-import {isPalindrome} from "../07-is-palindrome"
+import {isPalindrome} from "../08-is-palindrome"
 
 let palindrome = "level"
 let falsePalindrome = "not a palindrome"

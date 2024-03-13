@@ -1,5 +1,5 @@
 import {expect, test} from "vitest"
-import {reverseString, reverseString2, reverseString3} from "../06-reverse-string"
+import {reverseString, reverseString2, reverseString3} from "../07-reverse-string"
 
 let string = "hello"
 let expected = "olleh"

@@ -1,5 +1,5 @@
 import {expect, test} from "vitest"
-import {countVowels, countVowels2} from "../08-count-vowels"
+import {countVowels, countVowels2} from "../09-count-vowels"
 
 const testCases = [
   {input: "", expected: 0},
@@ -14,7 +14,7 @@ test("Count number of vowels using filter and includes", () => {
   })
 })
 
-test("Count number of using regex", () => {
+test("Count number of vowels  using regex", () => {
   testCases.forEach(({input, expected}) => {
     expect(countVowels2(input)).toBe(expected)
   })

@@ -1,22 +1,29 @@
 import {expect, test} from "vitest"
 import {calculator} from "../03-calculator"
 
-const testCases = [
-  {num1: 5, num2: 5, operator: "+", expected: 10},
-  {num1: 10, num2: 5, operator: "-", expected: 5},
-  {num1: 5, num2: 5, operator: "*", expected: 25},
-  {num1: 35, num2: 5, operator: "/", expected: 7},
-  {num1: "35", num2: 5, operator: "/", expected: "Invalid inputs"},
-  {num1: 25, num2: "5", operator: "/", expected: "Invalid inputs"},
-  {num1: "35", num2: "5", operator: "/", expected: "Invalid inputs"},
-  {num1: 35, num2: 5, operator: 5, expected: "Invalid operator"},
-  {num1: 35, num2: 5, operator: "#", expected: "Invalid operator"},
-  {num1: 35, num2: 5, operator: "test", expected: "Invalid operator"},
-]
+test("Addition operation: performs arithmetic operations correctly", () => {
+  expect(calculator(5, 5, "+")).toBe(10)
+  expect(calculator(5, "5", "+")).toBe("Invalid inputs")
+})
 
-test("Calculator function performs arithmetic operations correctly", () => {
-  testCases.forEach(({num1, num2, operator, expected}) => {
-    const result = calculator(num1, num2, operator)
-    expect(result).toBe(expected)
-  })
+test("Subtraction operation: performs arithmetic operations correctly", () => {
+  expect(calculator(15, 5, "-")).toBe(10)
+  expect(calculator(5, "5", "-")).toBe("Invalid inputs")
+})
+
+test("Multiplication operation: performs arithmetic operations correctly", () => {
+  expect(calculator(5, 5, "*")).toBe(25)
+  expect(calculator(5, "5", "*")).toBe("Invalid inputs")
+})
+
+test("Division operation: performs arithmetic operations correctly", () => {
+  expect(calculator(25, 5, "/")).toBe(5)
+  expect(calculator(5, "5", "/")).toBe("Invalid inputs")
+})
+
+test("Invalid operator or inputs: handled correctly", () => {
+  expect(calculator(25, 5, "&")).toBe("Invalid operator")
+  expect(calculator(5, "5", "%")).toBe("Invalid inputs")
+  expect(calculator("5", 5, "%")).toBe("Invalid inputs")
+  expect(calculator("5", "5", "%")).toBe("Invalid inputs")
 })
